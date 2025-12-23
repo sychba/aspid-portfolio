@@ -13,7 +13,7 @@ export function Navbar() {
   const location = useLocation();
 
   const navLinks = [
-    { name: "Experience", href: "/experience" },
+    { name: "Reviews", href: "/reviews" },
     { name: "Contact", href: "/contact" },
   ];
 

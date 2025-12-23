@@ -15,7 +15,7 @@ import AuthPage from "./pages/Auth.tsx";
 import NotFound from "./pages/NotFound.tsx";
 import Projects from "./pages/Projects.tsx";
 import Skills from "./pages/Skills.tsx";
-import Experience from "./pages/Experience.tsx";
+import Reviews from "./pages/Experience.tsx";
 import Contact from "./pages/Contact.tsx";
 
 const convex = new ConvexReactClient(import.meta.env.VITE_CONVEX_URL as string);
@@ -54,7 +54,7 @@ createRoot(document.getElementById("root")!).render(
             <Route path="/" element={<Landing />} />
             <Route path="/projects" element={<Projects />} />
             <Route path="/skills" element={<Skills />} />
-            <Route path="/experience" element={<Experience />} />
+            <Route path="/reviews" element={<Reviews />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/auth" element={<AuthPage redirectAfterAuth="/" />} />
             <Route path="*" element={<NotFound />} />

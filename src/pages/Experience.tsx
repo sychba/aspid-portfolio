@@ -5,8 +5,8 @@ import { api } from "@/convex/_generated/api";
 import { useQuery } from "convex/react";
 import { motion } from "framer-motion";
 
-export default function Experience() {
-  const experiences = useQuery(api.portfolio.getExperiences);
+export default function Reviews() {
+  const reviews = useQuery(api.portfolio.getExperiences);
 
   return (
     <div className="min-h-screen bg-background text-foreground selection:bg-primary/30">
@@ -17,29 +17,34 @@ export default function Experience() {
           animate={{ opacity: 1, y: 0 }}
           className="text-center mb-16"
         >
-          <h1 className="text-4xl font-bold mb-4">Experience</h1>
-          <p className="text-muted-foreground">My professional journey</p>
+          <h1 className="text-4xl font-bold mb-4">Reviews</h1>
+          <p className="text-muted-foreground">Feedback from collaborators and partners</p>
         </motion.div>
 
         <div className="space-y-8">
-          {experiences ? (
-            experiences.map((exp) => (
-              <GlassCard key={exp._id} className="relative pl-8 border-l-2 border-primary/30 rounded-l-none">
-                <div className="absolute -left-[9px] top-8 w-4 h-4 rounded-full bg-primary shadow-[0_0_10px_var(--color-primary)]" />
-                <div className="flex flex-col sm:flex-row sm:items-center justify-between mb-2">
-                  <h3 className="text-xl font-bold">{exp.title}</h3>
-                  <span className="text-sm text-muted-foreground bg-secondary/10 px-3 py-1 rounded-full">
-                    {exp.startDate} - {exp.current ? "Present" : exp.endDate}
-                  </span>
+          {reviews ? (
+            reviews.map((review) => (
+              <GlassCard key={review._id} hoverEffect className="space-y-3">
+                <div className="flex flex-col gap-3">
+                  <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+                    <div>
+                      <p className="text-xs uppercase tracking-[0.2em] text-secondary/80">Project</p>
+                      <h3 className="text-xl font-bold">{review.title}</h3>
+                    </div>
+                    <span className="text-sm text-muted-foreground bg-secondary/10 px-3 py-1 rounded-full">
+                      {review.startDate} - {review.current ? "Present" : review.endDate ?? "Completed"}
+                    </span>
+                  </div>
+                  <p className="text-lg text-primary">{review.company}</p>
+                  <p className="text-muted-foreground italic">"{review.description}"</p>
                 </div>
-                <p className="text-lg text-primary mb-2">{exp.company}</p>
-                <p className="text-muted-foreground">{exp.description}</p>
               </GlassCard>
             ))
           ) : (
             Array.from({ length: 2 }).map((_, i) => (
-              <GlassCard key={i} className="h-32 animate-pulse">
-                <div className="h-4 bg-muted/20 rounded w-1/3 mb-4" />
+              <GlassCard key={i} className="space-y-4 animate-pulse">
+                <div className="h-4 bg-muted/20 rounded w-1/4" />
+                <div className="h-6 bg-muted/20 rounded w-2/3" />
                 <div className="h-4 bg-muted/20 rounded w-full" />
               </GlassCard>
             ))

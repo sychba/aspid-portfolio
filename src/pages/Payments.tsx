@@ -8,36 +8,36 @@ import { useNavigate } from "react-router";
 
 const paymentPlans = [
   {
-    title: "Launch Essentials",
-    price: "$1,200",
+    title: "Basic",
+    price: "$25",
+    timeline: "3-day delivery",
+    description: "Essential landing page or personal site to get you started online.",
+    features: [
+      "Single page layout",
+      "Mobile responsive",
+      "Basic SEO setup",
+    ],
+  },
+  {
+    title: "Decent",
+    price: "$50",
+    timeline: "1-week delivery",
+    description: "Multi-page website with custom styling and interactive elements.",
+    features: [
+      "Up to 5 pages",
+      "Contact form integration",
+      "Social media connection",
+    ],
+  },
+  {
+    title: "Ecommerce",
+    price: "$150",
     timeline: "2-week delivery",
-    description: "Perfect for swift landing pages or boutique storefronts that need polish fast.",
+    description: "Full online store setup with product management and payment processing.",
     features: [
-      "Discovery call + scope confirmation",
-      "Two milestone reviews",
-      "Quality assurance + light onboarding",
-    ],
-  },
-  {
-    title: "Growth Accelerator",
-    price: "$2,800",
-    timeline: "4-week delivery",
-    description: "Full-scale builds with advanced integrations, animations, and CMS handoff.",
-    features: [
-      "Detailed UX wireframes",
-      "Weekly progress demos",
-      "Payment split across three milestones",
-    ],
-  },
-  {
-    title: "Custom Retainer",
-    price: "Starts at $1,000/mo",
-    timeline: "Flexible cadence",
-    description: "Ongoing iteration, optimization, and launch support for scaling retailers.",
-    features: [
-      "Guaranteed sprint availability",
-      "Priority bug fixes & enhancements",
-      "Monthly strategy reviews",
+      "Product catalog setup",
+      "Shopping cart & checkout",
+      "Admin dashboard training",
     ],
   },
 ];
@@ -50,7 +50,7 @@ const paymentHighlights = [
   },
   {
     title: "Transparent Timeline",
-    description: "Upfront schedules keep you in the loop on what’s shipping and when.",
+    description: "Upfront schedules keep you in the loop on what's shipping and when.",
     icon: Clock3,
   },
   {

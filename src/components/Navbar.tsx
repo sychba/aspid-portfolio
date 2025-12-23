@@ -15,6 +15,7 @@ export function Navbar() {
   const navLinks = [
     { name: "Reviews", href: "/reviews" },
     { name: "Contact", href: "/contact" },
+    { name: "Payments", href: "/payments" },
   ];
 
   const isActive = (path: string) => location.pathname === path;

@@ -24,7 +24,7 @@ export default function Reviews() {
         <div className="space-y-8">
           {reviews ? (
             reviews.map((review) => (
-              <GlassCard key={review._id} hoverEffect className="space-y-3">
+              <div key={review._id} className="rounded-2xl p-6 bg-white/5 border border-white/10 space-y-3 backdrop-blur">
                 <div className="flex flex-col gap-3">
                   <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3">
                     <div>
@@ -38,7 +38,7 @@ export default function Reviews() {
                   <p className="text-lg text-primary">{review.company}</p>
                   <p className="text-muted-foreground italic">"{review.description}"</p>
                 </div>
-              </GlassCard>
+              </div>
             ))
           ) : (
             Array.from({ length: 2 }).map((_, i) => (

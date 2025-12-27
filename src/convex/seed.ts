@@ -1,3 +1,4 @@
+
 import { mutation } from "./_generated/server";
 
 export const seedData = mutation({
@@ -8,6 +9,30 @@ export const seedData = mutation({
     for (const project of projects) {
       await ctx.db.delete(project._id);
     }
+
+    // Seed Projects
+    await ctx.db.insert("projects", {
+      title: "Coursa",
+      description: "An AI powered course generator",
+      tags: ["AI", "Generative"],
+      status: "Unfinished / Abandonded",
+      featured: true,
+      link: "https://coursa-app.netlify.app/",
+      githubLink: "#",
+      imageUrl: "https://iili.io/fVc9VLB.png",
+    });
+
+    await ctx.db.insert("projects", {
+      title: "Qodex",
+      description: "Built with AI",
+      tags: ["AI", "Generative"],
+      status: "Finished",
+      featured: true,
+      link: "https://qodex.vly.site/",
+      githubLink: "#",
+      imageUrl: "https://iili.io/fVc1lix.md.png",
+    });
+
 
 
 

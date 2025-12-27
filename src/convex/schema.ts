@@ -37,6 +37,7 @@ const schema = defineSchema(
       description: v.string(),
       imageUrl: v.optional(v.string()),
       tags: v.array(v.string()),
+      status: v.string(), // e.g., "Completed", "In Progress", "Unfinished"
       link: v.optional(v.string()),
       githubLink: v.optional(v.string()),
       featured: v.boolean(),

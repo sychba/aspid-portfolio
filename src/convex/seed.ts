@@ -9,6 +9,7 @@ export const seedData = mutation({
       await ctx.db.delete(project._id);
     }
 
+    /*
     // Seed Projects
     await ctx.db.insert("projects", {
       title: "Myer's Engine",
@@ -22,8 +23,8 @@ export const seedData = mutation({
 
     await ctx.db.insert("projects", {
       title: "Coursa",
-      description: "AI-powered Course generator. Create comprehensive courses in minutes.",
-      tags: ["SaaS", "Education", "Demo"],
+      description: "An AI powered course generator",
+      tags: ["AI", "Generative", "Unfinished / Abandonded"],
       featured: true,
       link: "#",
       githubLink: "#",
@@ -39,6 +40,7 @@ export const seedData = mutation({
       githubLink: "#",
       imageUrl: "https://images.unsplash.com/photo-1556742049-0cfed4f7a07d?w=800&q=80",
     });
+    */
 
     // Check if skills exist
     const existingSkills = await ctx.db.query("skills").first();
@@ -60,6 +62,13 @@ export const seedData = mutation({
       }
     }
 
+    // Clear existing experiences
+    const experiences = await ctx.db.query("experiences").collect();
+    for (const exp of experiences) {
+      await ctx.db.delete(exp._id);
+    }
+
+    /*
     // Check if experiences exist
     const existingExperiences = await ctx.db.query("experiences").first();
     if (!existingExperiences) {
@@ -81,5 +90,6 @@ export const seedData = mutation({
         description: "Developed and maintained multiple client projects using the MERN stack.",
       });
     }
+    */
   },
 });

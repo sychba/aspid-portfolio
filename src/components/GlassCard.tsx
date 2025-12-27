@@ -12,8 +12,7 @@ export function GlassCard({ children, className, hoverEffect = false, ...props }
   return (
     <motion.div
       initial={{ opacity: 0, y: 20 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true }}
+      animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5 }}
       className={cn(
         "glass rounded-2xl p-6 transition-all duration-300",

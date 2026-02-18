@@ -27,14 +27,15 @@ export function Navbar() {
       transition={{ duration: 0.5, ease: "easeOut" }}
       className="fixed top-6 left-1/2 -translate-x-1/2 z-50 w-[90%] max-w-lg"
     >
-      <div className="glass rounded-full px-4 py-2 flex items-center justify-between border border-white/10 shadow-2xl bg-black/40 backdrop-blur-xl">
+      <div className="glass rounded-full px-4 py-2 flex items-center justify-between border-2 border-transparent bg-gradient-to-r from-red-500 via-green-500 to-blue-500 p-[2px] shadow-2xl">
+        <div className="w-full h-full bg-black/80 backdrop-blur-xl rounded-full flex items-center justify-between px-4 py-1">
         {/* Logo */}
         <div
           className="flex-shrink-0 cursor-pointer pl-2"
           onClick={() => navigate("/")}
         >
-          <span className="text-lg font-bold bg-clip-text text-transparent bg-gradient-to-r from-primary to-secondary">
-            Aspid
+          <span className="text-lg font-bold bg-clip-text text-transparent bg-gradient-to-r from-red-500 via-yellow-500 to-blue-500 animate-pulse">
+            Aspid (Gay)
           </span>
         </div>
 
@@ -47,8 +48,8 @@ export function Navbar() {
               className={cn(
                 "px-4 py-1.5 rounded-full text-sm font-medium transition-all duration-300",
                 isActive(link.href)
-                  ? "bg-primary/20 text-primary"
-                  : "text-foreground/80 hover:text-primary hover:bg-white/10",
+                  ? "bg-primary/20 text-primary font-bold"
+                  : "text-foreground/80 hover:text-primary hover:bg-white/10 hover:font-bold",
               )}
             >
               {link.name}
@@ -62,10 +63,10 @@ export function Navbar() {
             <Button
               variant="ghost"
               size="sm"
-              className="rounded-full hover:bg-white/10 text-xs h-8 px-4"
+              className="rounded-full hover:bg-white/10 text-xs h-8 px-4 text-primary"
               onClick={() => navigate("/dashboard")}
             >
-              Dashboard
+              Gay Dashboard
             </Button>
           )}
         </div>
@@ -78,6 +79,7 @@ export function Navbar() {
           >
             {isOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
           </button>
+        </div>
         </div>
       </div>
 

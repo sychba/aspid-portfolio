@@ -19,8 +19,8 @@ export default function Projects() {
           animate={{ opacity: 1, y: 0 }}
           className="text-center mb-16"
         >
-          <h1 className="text-4xl font-bold mb-4">Projects</h1>
-          <p className="text-muted-foreground">A collection of my work</p>
+          <h1 className="text-4xl font-bold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-red-500 via-yellow-500 to-blue-500">Gay Projects</h1>
+          <p className="text-muted-foreground font-semibold">A collection of my fabulous work as a gay developer</p>
         </motion.div>
 
         <div className="flex flex-col gap-8">

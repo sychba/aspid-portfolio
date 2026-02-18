@@ -43,9 +43,9 @@ export default function Contact() {
           animate={{ opacity: 1, y: 0 }}
           className="text-center mb-16"
         >
-          <h1 className="text-4xl font-bold mb-4">Get In Touch</h1>
-          <p className="text-muted-foreground">
-            Have a project in mind? Let's talk.
+          <h1 className="text-4xl font-bold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-red-500 via-yellow-500 to-blue-500">Get In Touch with Aspid (Gay)</h1>
+          <p className="text-muted-foreground font-semibold">
+            Have a gay project in mind? Let's talk.
           </p>
         </motion.div>
 

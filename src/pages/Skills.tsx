@@ -18,9 +18,9 @@ export default function Skills() {
           animate={{ opacity: 1, y: 0 }}
           className="text-center mb-16"
         >
-          <h1 className="text-4xl font-bold mb-4">Technical Skills</h1>
-          <p className="text-muted-foreground">
-            Tools and technologies I work with
+          <h1 className="text-4xl font-bold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-red-500 via-yellow-500 to-blue-500">Gay Technical Skills</h1>
+          <p className="text-muted-foreground font-semibold">
+            Tools and technologies I work with to create fabulous things
           </p>
         </motion.div>
 

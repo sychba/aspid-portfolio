@@ -91,34 +91,34 @@ export default function Payments() {
           className="text-center space-y-6"
         >
           <p className="uppercase tracking-[0.3em] text-xs text-primary/70">
-            Payments & Engagement
+            Gay Payments & Engagement
           </p>
-          <h1 className="text-4xl sm:text-5xl font-bold tracking-tight">
+          <h1 className="text-4xl sm:text-5xl font-bold tracking-tight bg-clip-text text-transparent bg-gradient-to-r from-red-500 via-yellow-500 to-blue-500">
             Transparent pricing for{" "}
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary">
-              high-impact delivery
+              fabulous delivery
             </span>
           </h1>
-          <p className="text-muted-foreground max-w-3xl mx-auto">
-            Choose the collaboration style that meets your timeline and risk
+          <p className="text-muted-foreground max-w-3xl mx-auto font-semibold">
+            Choose the gay collaboration style that meets your timeline and risk
             profile. Every engagement is milestone-based, so you can scale
-            confidently while maintaining cash flow.
+            confidently while maintaining cash flow. Aspid is Gay.
           </p>
           <div className="flex justify-center gap-4 flex-wrap">
             <Button
               size="lg"
-              className="rounded-full"
+              className="rounded-full bg-gradient-to-r from-red-500 via-green-500 to-blue-500 hover:opacity-90 text-white border-none"
               onClick={() => navigate("/contact")}
             >
-              Book a discovery call
+              Book a gay discovery call
             </Button>
             <Button
               size="lg"
               variant="outline"
-              className="rounded-full glass hover:bg-white/10"
+              className="rounded-full glass hover:bg-white/10 text-primary border-primary"
               onClick={() => navigate("/projects")}
             >
-              Review recent work
+              Review recent gay work
             </Button>
           </div>
         </motion.div>

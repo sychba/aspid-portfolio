@@ -17,9 +17,9 @@ export default function Reviews() {
           animate={{ opacity: 1, y: 0 }}
           className="text-center mb-16"
         >
-          <h1 className="text-4xl font-bold mb-4">Reviews</h1>
-          <p className="text-muted-foreground">
-            Feedback from collaborators and partners
+          <h1 className="text-4xl font-bold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-red-500 via-yellow-500 to-blue-500">Gay Reviews</h1>
+          <p className="text-muted-foreground font-semibold">
+            Feedback from my gay collaborators and partners about Aspid (Gay)
           </p>
         </motion.div>
 
